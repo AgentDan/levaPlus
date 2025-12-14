@@ -101,4 +101,17 @@ router.delete('/delete/:id', async (req, res) => {
     }
 })
 
+router.post('/save', async (req, res) => {
+    try {
+        const { modelPathLeva, env } = req.body;
+        console.log("env : ", env);
+        const gltf = JSON.parse(fs.readFileSync(modelPathLeva, "utf-8"));
+        gltf.scenes[0].extras.env = env;
+        fs.writeFileSync(modelPathLeva, JSON.stringify(gltf, null, 2), "utf-8");
+    } catch (error) {
+        console.error("Ошибка при сохранении GLTF:", error);
+        res.status(400).json({ message: error.message || error.toString() });
+    }
+});
+
 module.exports = router

@@ -1,7 +1,8 @@
 import React from "react";
 import Description from "./Description/Description.jsx";
 
-export function Meshes({arr, setArr, nodes, materials}) {
+export function Meshes({arr, setArr, nodes, materials, envLeva}) {
+
     return (
         <>
             {arr.map((item) => {

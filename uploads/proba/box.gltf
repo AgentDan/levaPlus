@@ -1,213 +1,408 @@
 {
-    "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.8.19",
-        "version" : "2.0"
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v1.8.19",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "extras": {
+        "env": [
+          {
+            "type": "background",
+            "name": "Background",
+            "file": "/img/skyTwo.exr",
+            "intensity": 0.1999999999999998
+          },
+          {
+            "type": "spotlight",
+            "name": "SpotLightOne",
+            "position": [
+              -0.20899999999999985,
+              0.5540000000000002,
+              1.5159999999999996
+            ],
+            "intensity": 4.199999999999999,
+            "visible": false,
+            "enable": false,
+            "color": "red"
+          },
+          {
+            "type": "spotlight",
+            "name": "SpotLightTwo",
+            "position": [
+              1.0110000000000001,
+              1.489,
+              0.349
+            ],
+            "intensity": 3.419999999999999,
+            "visible": false,
+            "enable": false,
+            "color": "green"
+          },
+          {
+            "type": "spotlight",
+            "name": "SpotLightThree",
+            "position": [
+              1.383,
+              0.385,
+              1.3819999999999997
+            ],
+            "intensity": 2.5699999999999994,
+            "visible": false,
+            "enable": false,
+            "color": "black"
+          },
+          {
+            "type": "description",
+            "name": "default_1",
+            "descriptionName": "default_1",
+            "desc": "HELLO WORLD !!! DescriptONE11111111",
+            "x": 2,
+            "y": 2,
+            "z": 2,
+            "clickDescription": false
+          },
+          {
+            "type": "description",
+            "name": "default_2",
+            "descriptionName": "default_2",
+            "desc": "HELLO WORLD !!! DescriptTWO222222222",
+            "x": 1.5,
+            "y": 1.5,
+            "z": 2,
+            "clickDescription": false
+          }
+        ],
+        "jewelcraft": {
+          "weighting_materials": {
+            "coll": [
+              {
+                "name": "Yellow Gold 24K",
+                "composition": "Au 99.9%",
+                "density": 19.32
+              },
+              {
+                "name": "Yellow Gold 22K",
+                "composition": "Au 91.6%, Ag 4.9%, Cu 3.5%",
+                "density": 17.86
+              },
+              {
+                "name": "Yellow Gold 18K",
+                "composition": "Au 75.3%, Ag 16.5%, Cu 6.7%, Zn 1.5%",
+                "density": 15.53
+              },
+              {
+                "name": "Yellow Gold 14K",
+                "composition": "Au 58.4%, Ag 9.8%, Cu 28%, Zn 3.8%",
+                "density": 13.05
+              },
+              {
+                "name": "Yellow Gold 10K",
+                "composition": "Au 41.7%, Ag 11.2%, Cu 40.5%, Zn 6.6%",
+                "density": 11.47
+              },
+              {
+                "name": "White Gold 18K Pd",
+                "composition": "Au 78.7%, Cu 8.3%, Pd 13%",
+                "density": 15.66
+              },
+              {
+                "name": "White Gold 18K Ni",
+                "composition": "Au 75.15%, Cu 8.75%, Ni 12%, Zn 4.1%",
+                "density": 14.69
+              },
+              {
+                "name": "White Gold 14K Pd",
+                "composition": "Au 58.55%, Cu 7.2%, Ag 20%, Pd 13.5%, Zn 0.75%",
+                "density": 14.6
+              },
+              {
+                "name": "White Gold 14K Ni",
+                "composition": "Au 58.43%, Cu 21%, Ni 12.73%, Zn 7.84%",
+                "density": 12.61
+              },
+              {
+                "name": "White Gold 10K",
+                "composition": "Au 41.7%, Cu 35.7%, Ni 10.3%, Zn 12.3%",
+                "density": 10.99
+              },
+              {
+                "name": "Rose Gold 18K",
+                "composition": "Au 75.3%, Cu 23.3%, Ag 1.2%, Zn 0.2%",
+                "density": 15.02
+              },
+              {
+                "name": "Rose Gold 14K",
+                "composition": "Au 58.4%, Cu 39.2%, Ag 2%, Zn 0.4%",
+                "density": 13.03
+              },
+              {
+                "name": "Rose Gold 10K",
+                "composition": "Au 41.5%, Cu 55%, Ag 3%, Zn 0.5%",
+                "density": 11.52
+              },
+              {
+                "name": "Platinum 950",
+                "composition": "Pt 95%, Ru 5%",
+                "density": 20.7
+              },
+              {
+                "name": "Platinum 900",
+                "composition": "Pt 90%, Ir 10%",
+                "density": 21.54
+              },
+              {
+                "name": "Palladium 950",
+                "composition": "Pd 95%, Ru 5%",
+                "density": 12.16
+              },
+              {
+                "name": "Silver Sterling",
+                "composition": "Ag 92.5%, Cu 7.5%",
+                "density": 10.36
+              }
+            ],
+            "index": 0
+          }
+        }
+      },
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "default"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "default_1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8000000715255737,
+          0.017470646649599075,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
     },
-    "scene" : 0,
-    "scenes" : [
+    {
+      "doubleSided": true,
+      "name": "default_2",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0.8000000715255737,
+          0.002591498428955674,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "extras": {
+        "i": "xdfghsdfhfgh",
+        "x": "2",
+        "y": "2",
+        "z": "2"
+      },
+      "name": "default",
+      "primitives": [
         {
-            "extras" : {
-                "jewelcraft" : {
-                    "weighting_materials" : {
-                        "coll" : [
-                            {
-                                "name" : "Yellow Gold 24K",
-                                "composition" : "Au 99.9%",
-                                "density" : 19.32
-                            },
-                            {
-                                "name" : "Yellow Gold 22K",
-                                "composition" : "Au 91.6%, Ag 4.9%, Cu 3.5%",
-                                "density" : 17.86
-                            },
-                            {
-                                "name" : "Yellow Gold 18K",
-                                "composition" : "Au 75.3%, Ag 16.5%, Cu 6.7%, Zn 1.5%",
-                                "density" : 15.53
-                            },
-                            {
-                                "name" : "Yellow Gold 14K",
-                                "composition" : "Au 58.4%, Ag 9.8%, Cu 28%, Zn 3.8%",
-                                "density" : 13.05
-                            },
-                            {
-                                "name" : "Yellow Gold 10K",
-                                "composition" : "Au 41.7%, Ag 11.2%, Cu 40.5%, Zn 6.6%",
-                                "density" : 11.47
-                            },
-                            {
-                                "name" : "White Gold 18K Pd",
-                                "composition" : "Au 78.7%, Cu 8.3%, Pd 13%",
-                                "density" : 15.66
-                            },
-                            {
-                                "name" : "White Gold 18K Ni",
-                                "composition" : "Au 75.15%, Cu 8.75%, Ni 12%, Zn 4.1%",
-                                "density" : 14.69
-                            },
-                            {
-                                "name" : "White Gold 14K Pd",
-                                "composition" : "Au 58.55%, Cu 7.2%, Ag 20%, Pd 13.5%, Zn 0.75%",
-                                "density" : 14.6
-                            },
-                            {
-                                "name" : "White Gold 14K Ni",
-                                "composition" : "Au 58.43%, Cu 21%, Ni 12.73%, Zn 7.84%",
-                                "density" : 12.61
-                            },
-                            {
-                                "name" : "White Gold 10K",
-                                "composition" : "Au 41.7%, Cu 35.7%, Ni 10.3%, Zn 12.3%",
-                                "density" : 10.99
-                            },
-                            {
-                                "name" : "Rose Gold 18K",
-                                "composition" : "Au 75.3%, Cu 23.3%, Ag 1.2%, Zn 0.2%",
-                                "density" : 15.02
-                            },
-                            {
-                                "name" : "Rose Gold 14K",
-                                "composition" : "Au 58.4%, Cu 39.2%, Ag 2%, Zn 0.4%",
-                                "density" : 13.03
-                            },
-                            {
-                                "name" : "Rose Gold 10K",
-                                "composition" : "Au 41.5%, Cu 55%, Ag 3%, Zn 0.5%",
-                                "density" : 11.52
-                            },
-                            {
-                                "name" : "Platinum 950",
-                                "composition" : "Pt 95%, Ru 5%",
-                                "density" : 20.7
-                            },
-                            {
-                                "name" : "Platinum 900",
-                                "composition" : "Pt 90%, Ir 10%",
-                                "density" : 21.54
-                            },
-                            {
-                                "name" : "Palladium 950",
-                                "composition" : "Pd 95%, Ru 5%",
-                                "density" : 12.16
-                            },
-                            {
-                                "name" : "Silver Sterling",
-                                "composition" : "Ag 92.5%, Cu 7.5%",
-                                "density" : 10.36
-                            }
-                        ],
-                        "index" : 0
-                    }
-                }
-            },
-            "name" : "Scene",
-            "nodes" : [
-                0
-            ]
-        }
-    ],
-    "nodes" : [
-        {
-            "mesh" : 0,
-            "name" : "default"
-        }
-    ],
-    "materials" : [
-        {
-            "doubleSided" : true,
-            "name" : "default",
-            "pbrMetallicRoughness" : {
-                "baseColorFactor" : [
-                    0.056709788739681244,
-                    0.012561059556901455,
-                    0.8000000715255737,
-                    1
-                ],
-                "roughnessFactor" : 0.05905511975288391
-            }
-        }
-    ],
-    "meshes" : [
-        {
-            "extras" : {
-                "my" : "MyDescription 1) asdfsdf 2) sdfsaggn sdgsogh  3) sdfsdk nsog sdogns gosng sdggg"
-            },
-            "name" : "default",
-            "primitives" : [
-                {
-                    "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TEXCOORD_0" : 2
-                    },
-                    "indices" : 3,
-                    "material" : 0
-                }
-            ]
-        }
-    ],
-    "accessors" : [
-        {
-            "bufferView" : 0,
-            "componentType" : 5126,
-            "count" : 24,
-            "max" : [
-                1,
-                1,
-                -0.93970787525177
-            ],
-            "min" : [
-                -1,
-                -1,
-                -1
-            ],
-            "type" : "VEC3"
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
         },
         {
-            "bufferView" : 1,
-            "componentType" : 5126,
-            "count" : 24,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 2,
-            "componentType" : 5126,
-            "count" : 24,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 3,
-            "componentType" : 5123,
-            "count" : 36,
-            "type" : "SCALAR"
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
         }
-    ],
-    "bufferViews" : [
-        {
-            "buffer" : 0,
-            "byteLength" : 288,
-            "byteOffset" : 0
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 288,
-            "byteOffset" : 288
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 192,
-            "byteOffset" : 576
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 72,
-            "byteOffset" : 768
-        }
-    ],
-    "buffers" : [
-        {
-            "byteLength" : 840,
-            "uri" : "data:application/octet-stream;base64,AACAvwAAgL+ykHC/AACAvwAAgL+ykHC/AACAvwAAgL+ykHC/AACAvwAAgD+ykHC/AACAvwAAgD+ykHC/AACAvwAAgD+ykHC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgD8AAIC/AACAvwAAgD8AAIC/AACAvwAAgD8AAIC/AACAPwAAgL+ykHC/AACAPwAAgL+ykHC/AACAPwAAgL+ykHC/AACAPwAAgD+ykHC/AACAPwAAgD+ykHC/AACAPwAAgD+ykHC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgD8AAIC/AACAPwAAgD8AAIC/AACAPwAAgD8AAIC/AACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAvwAAAAAAAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AACAvwAAAAAAAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAPwAAAAAAAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAACAPwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AACAPwAAAAAAAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAACAPwAAAAAAAACAAADAPurtQT8AAAA+LCT8PgAAwD4AAAAAAAAgP+rtQT8AACA/AAAAAAAAYD8sJPw+AADAPgAAQD8AAAA+AAAAPwAAwD4AAEA/AAAgPwAAQD8AACA/AABAPwAAYD8AAAA/AADAPiwk/D4AAMA+LCT8PgAAwD4sJPw+AAAgPywk/D4AACA/LCT8PgAAID8sJPw+AADAPgAAAD8AAMA+AAAAPwAAwD4AAAA/AAAgPwAAAD8AACA/AAAAPwAAID8AAAA/AAADAAkAAAAJAAYACAAKABUACAAVABMAFAAXABEAFAARAA4ADQAPAAQADQAEAAIABwASAAwABwAMAAEAFgALAAUAFgAFABAA"
-        }
-    ]
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 8,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 8,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 8,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 12,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 16,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 16,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 16,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 24,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 96,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 96,
+      "byteOffset": 96
+    },
+    {
+      "buffer": 0,
+      "byteLength": 64,
+      "byteOffset": 192
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24,
+      "byteOffset": 256
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 280
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 472
+    },
+    {
+      "buffer": 0,
+      "byteLength": 128,
+      "byteOffset": 664
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48,
+      "byteOffset": 792
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 840,
+      "uri": "data:application/octet-stream;base64,AACAvwAAgL8AAIA/AACAvwAAgD8AAIA/AACAvwAAgL8AAIC/AACAvwAAgD8AAIC/AACAPwAAgL8AAIA/AACAPwAAgD8AAIA/AACAPwAAgL8AAIC/AACAPwAAgD8AAIC/AAAAAAAAgL8AAACAAAAAAAAAgD8AAACAAAAAAAAAgL8AAACAAAAAAAAAgD8AAACAAAAAAAAAgL8AAACAAAAAAAAAgD8AAACAAAAAAAAAgL8AAACAAAAAAAAAgD8AAACAAAAAPgAAgD4AAGA/AACAPgAAAD4AAAA/AABgPwAAAD8AAMA+AACAPgAAID8AAIA+AADAPgAAAD8AACA/AAAAPwIABgAEAAIABAAAAAcAAwABAAcAAQAFAAAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAPwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIA/AACAvwAAgL8AAIA/AACAvwAAgD8AAIC/AACAPwAAgD8AAIC/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIC/AACAvwAAgD8AAIC/AACAvwAAgD8AAIA/AACAvwAAgD8AAIA/AACAvwAAgL8AAAAAAAAAgAAAAAAAAAAAAACAPwAAgL8AAAAAAAAAgAAAAAAAAAAAAACAPwAAgL8AAAAAAAAAgAAAAAAAAAAAAACAvwAAgL8AAAAAAAAAgAAAAAAAAAAAAACAvwAAAAAAAAAAAACAPwAAgD8AAAAAAAAAgAAAAAAAAAAAAACAPwAAgD8AAAAAAAAAgAAAAAAAAAAAAACAvwAAgD8AAAAAAAAAgAAAAAAAAAAAAACAvwAAgD8AAAAAAAAAgAAAwD4AAIA/AADAPgAAAAAAACA/AACAPwAAID8AAAAAAADAPgAAQD8AAMA+AABAPwAAID8AAEA/AAAgPwAAQD8AAMA+AACAPgAAwD4AAIA+AAAgPwAAgD4AACA/AACAPgAAwD4AAAA/AADAPgAAAD8AACA/AAAAPwAAID8AAAA/AAACAAYAAAAGAAQABQAHAA4ABQAOAAwADQAPAAsADQALAAkACAAKAAMACAADAAEA"
+    }
+  ],
+  "extras": {
+    "lastUpdatedFrom": "sphere.gltf"
+  },
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    }
+  ],
+  "images": [
+    {
+      "bufferView": 4,
+      "mimeType": "image/jpeg",
+      "name": "новое-дерево_99"
+    },
+    {
+      "bufferView": 17,
+      "mimeType": "image/png",
+      "name": "Carpet016_1K-PNG_NormalDX"
+    },
+    {
+      "bufferView": 18,
+      "mimeType": "image/png",
+      "name": "Carpet016_1K-PNG_Color"
+    },
+    {
+      "bufferView": 19,
+      "mimeType": "image/png",
+      "name": "Carpet016_1K-PNG_Roughness"
+    }
+  ]
 }

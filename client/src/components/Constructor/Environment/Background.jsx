@@ -1,6 +1,7 @@
 import {Environment} from "@react-three/drei";
 
 const Background = ({background}) => {
+
     return (
         <Environment
             files={background.file}
@@ -8,6 +9,7 @@ const Background = ({background}) => {
             environmentIntensity={background.intensity}
         />
     )
+
 };
 
 export default Background;

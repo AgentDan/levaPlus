@@ -4,12 +4,11 @@ import {Html} from "@react-three/drei";
 const Description = ({item, setArr}) => {
 
     const onClickDescription = (nic) => {
-        const cleanName = nic.replace(/[^a-zA-Z]/g, "");
 
         setArr(prev =>
             prev.map(item => {
-                const itemName = item.name.replace(/[^a-zA-Z]/g, "");
-                if (itemName === cleanName) {
+                // const itemName = item.name.replace(/[^a-zA-Z]/g, "");
+                if (item.fullName === nic) {
                     return {
                         ...item,
                         clickDescription: !item.clickDescription
@@ -22,7 +21,7 @@ const Description = ({item, setArr}) => {
 
     return (
         <>
-            <Html position={[item.x, item.y, item.z]} occlude distanceFactor={10}>
+            <Html position={[item.position[0], item.position[1], item.position[2]]} occlude distanceFactor={10}>
                 <div
                     className="cursor-pointer inline-block w-2 h-2"
                     onClick={() => onClickDescription(item.fullName)}
@@ -40,7 +39,6 @@ const Description = ({item, setArr}) => {
                     )}
                 </div>
             </Html>
-
         </>
     );
 };

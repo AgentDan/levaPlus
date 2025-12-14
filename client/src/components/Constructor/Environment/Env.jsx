@@ -7,16 +7,30 @@ import EnvShadows from "./EnvSchadows.jsx";
 import EnvEffectComposer from "./EnvEffectComposer.jsx";
 
 const Env = ({env}) => {
+
     return (
         <>
-            {env.lights && <EnvLight lights={env.lights}/>}
-            {env.background && <Background background={env.background}/>}
-            {env.fog && <Fog fog={env.fog}/>}
-            {env.toneMapping && <EnvToneMapping toneMapping={env.toneMapping}/>}
-            {env.shadows && <EnvShadows shadows={env.shadows}/>}
-            {env.EffectComposer && <EnvEffectComposer/>}
+            {env.map((item) => {
+                switch (item.type) {
+                    case "background":
+                        return <Background background={item}/>;
+                    case "spotlight":
+                        return <EnvLight lights={[item]}/>;
+                    case "fog":
+                        return <Fog fog={item}/>;
+                    case "EnvToneMapping":
+                        return <EnvToneMapping fog={item}/>;
+                    case "EnvShadows":
+                        return <EnvShadows fog={item}/>;
+                    case "EnvEffectComposer":
+                        return <EnvEffectComposer fog={item}/>;
+                    default:
+                        return null;
+                }
+            })}
         </>
     );
+
 };
 
 export default Env;

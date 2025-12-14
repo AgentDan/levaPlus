@@ -1,19 +1,20 @@
 import React, {useEffect} from 'react';
 import {folder, useControls} from "leva";
 
-const LevaToneMapping = ({ initialIntensity, onChange }) => {
-    const {exposure} = useControls({[initialIntensity.name] : folder({
-            exposure: {value: initialIntensity.exposure, min: 0, max: 10}
+const LevaShadows = ({ initialIntensity, onChange }) => {
+
+    const {component} = useControls({[initialIntensity.name] : folder({
+            component: {value: 1, min: 0, max: 10}
         }, {collapsed: true})
     });
 
-    useEffect(() => {
-        if (onChange) {
-            onChange({ exposure });
-        }
-    }, [exposure, onChange]);
+    // useEffect(() => {
+    //     if (onChange) {
+    //         onChange({ component });
+    //     }
+    // }, [component, onChange]);
 
     return null;
 };
 
-export default LevaToneMapping;
+export default LevaShadows;

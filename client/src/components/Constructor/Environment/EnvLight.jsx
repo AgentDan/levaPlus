@@ -35,6 +35,7 @@ const EnvLight = ({lights}) => {
                             <>
                                 <spotLight
                                     ref={el => (spotRefs.current[index] = el)}
+                                    visible={item.onoff}
                                     castShadow
                                     position={item.position}
                                     angle={item.angle ? item.angle * Math.PI / 180 : 45 * Math.PI / 180}
@@ -47,16 +48,16 @@ const EnvLight = ({lights}) => {
                                 />
                                 <mesh
                                     position={item.position}
-                                    visible={item.enable}
+                                    visible={item.visible}
                                 >
                                     <sphereGeometry args={[0.05, 16, 16]}/>
                                     <meshStandardMaterial color={item.color}/>
                                 </mesh>
                                 <mesh ref={el => (targetRefs.current[index] = el)}
                                       position={item.target}
-                                      visible={item.enable}
+                                      visible={item.visible}
                                 >
-                                    <boxGeometry args={[0.2, 0.2, 0.2]}/>
+                                    <boxGeometry args={[0.01, 0.01, 0.01]}/>
                                     <meshStandardMaterial color={item.color}/>
                                 </mesh>
                             </>

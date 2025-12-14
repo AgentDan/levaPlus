@@ -9,6 +9,7 @@ import LayoutMain from "./components/Main/LayoutMain.jsx";
 import {AuthContext} from "./context/AuthContext.jsx";
 import {useAuth} from "./hooks/auth.hook.js";
 import Construc from "./components/Constructor/Personal.jsx";
+import Proba from "./Proba.jsx"
 
 function App() {
     const {login, logout, token, username, userID, userFiles, userProjects, loading} = useAuth()
@@ -45,7 +46,7 @@ function App() {
                         />
 
                         <Route path="/main" element={<LayoutMain/>}/>
-
+                        <Route path="/proba" element={<Proba/>}/>
                         <Route path="/login" element={<SignIn/>}/>
 
                         <Route path="*" element={<Navigate to="/main" replace/>}/>

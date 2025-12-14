@@ -18,8 +18,6 @@ const LevaConstruct = ({ envLeva, setEnvLeva, modelPathLeva }) => {
     }, [envLeva]);
 
     const handleChange = (key, value) => {
-        console.log("key : ", key);
-        console.log("value : ", value);
         setEnvLeva(prev =>
             prev.map(item => (item.name === key ? { ...item, ...value } : item))
         );

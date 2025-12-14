@@ -40,7 +40,7 @@ export function Meshes({arr, setArr, nodes, materials, envLeva}) {
                                 color="black"
                             />
                         }
-                        {item.description && <Description setArr={setArr} item={item}/>}
+                        {/*{item.description && <Description setArr={setArr} item={item}/>}*/}
                     </mesh>
                 );
             })}

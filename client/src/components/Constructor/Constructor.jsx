@@ -37,14 +37,14 @@ const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr}) => 
                             isNaN(Number(item.name.slice(0, 1))) === false
                                 ? item.name.slice(0, 1)
                                 : NaN
-                        ),
-                        description: found?.desc ?? null,
-                        position: [
-                            found?.position[0] ?? null,
-                            found?.position[1]  ?? null,
-                            found?.position[2]  ?? null,
-                        ],
-                        clickDescription: found?.clickDescription ?? null
+                        )
+                        // description: found?.desc ?? null,
+                        // position: [
+                        //     found?.position[0] ?? null,
+                        //     found?.position[1]  ?? null,
+                        //     found?.position[2]  ?? null,
+                        // ],
+                        // clickDescription: found?.clickDescription ?? null
                     }
                 }
             )
@@ -61,6 +61,12 @@ const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr}) => 
             >
                 <Meshes arr={arr} setArr={setArr} materials={materials} nodes={nodes} envLeva={envLeva}/>
                 <Env env={envLeva}/>
+                <LevaConstruct
+                    nodes={nodes}
+                    envLeva={envLeva}
+                    setEnvLeva={setEnvLeva}
+                    modelPathLeva={modelPathLeva}
+                />
                 <OrbitControls
 
                     makeDefault
@@ -73,12 +79,6 @@ const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr}) => 
 
                 />
             </Canvas>
-            <LevaConstruct
-                nodes={nodes}
-                envLeva={envLeva}
-                setEnvLeva={setEnvLeva}
-                modelPathLeva={modelPathLeva}
-            />
             <Buttons
                 arr={arr}
                 setArr={setArr}

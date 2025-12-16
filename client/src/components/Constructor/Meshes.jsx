@@ -1,7 +1,6 @@
 import React from "react";
-import Description from "./Description/Description.jsx";
 
-export function Meshes({arr, setArr, nodes, materials, envLeva}) {
+export function Meshes({arr, nodes, materials}) {
 
     return (
         <>
@@ -23,7 +22,6 @@ export function Meshes({arr, setArr, nodes, materials, envLeva}) {
                         castShadow
                         receiveShadow
                     >
-                        {/*<meshStandardMaterial {...materials[item.fullName]} />*/}
 
                         {item.name.replace(/[0-9_]/g, "") !== "mirror"
                             ?
@@ -31,7 +29,6 @@ export function Meshes({arr, setArr, nodes, materials, envLeva}) {
                             :
                             <meshPhysicalMaterial
                                 transparent={true}
-                                // transmission={0}  // физическая прозрачность
                                 roughness={0}        // гладкая поверхность
                                 metalness={0}
                                 ior={1.2}            // стекло/пластик
@@ -40,7 +37,6 @@ export function Meshes({arr, setArr, nodes, materials, envLeva}) {
                                 color="black"
                             />
                         }
-                        {/*{item.description && <Description setArr={setArr} item={item}/>}*/}
                     </mesh>
                 );
             })}

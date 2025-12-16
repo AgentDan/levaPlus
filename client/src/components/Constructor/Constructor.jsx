@@ -38,13 +38,6 @@ const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr}) => 
                                 ? item.name.slice(0, 1)
                                 : NaN
                         )
-                        // description: found?.desc ?? null,
-                        // position: [
-                        //     found?.position[0] ?? null,
-                        //     found?.position[1]  ?? null,
-                        //     found?.position[2]  ?? null,
-                        // ],
-                        // clickDescription: found?.clickDescription ?? null
                     }
                 }
             )

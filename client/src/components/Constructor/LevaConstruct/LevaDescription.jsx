@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { folder, useControls } from 'leva';
-import { Html } from '@react-three/drei';
 
 const LevaDescription = ({ onChange, initialIntensity }) => {
     const [clickDesc, setClickDesc] = useState(initialIntensity.clickDescription);
@@ -29,29 +28,6 @@ const LevaDescription = ({ onChange, initialIntensity }) => {
         });
     }, [desc, x, y, z, clickDesc]);
 
-    return (
-        <Html
-            position={[x, y, z]}
-            distanceFactor={1}
-            zIndexRange={[0, 1]}
-            pointerEvents="none"
-        >
-            <div
-                onClick={onClickDescription}
-                className="cursor-pointer inline-block w-[50px] h-[50px]"
-            >
-                {clickDesc ? (
-                    <div className="bg-gray-700 text-white p-4 rounded-2xl w-48 h-auto break-words">
-                        {desc}
-                    </div>
-                ) : (
-                    <div>
-                        <img src="/img/logoi.png" alt="logo" />
-                    </div>
-                )}
-            </div>
-        </Html>
-    );
 };
 
 export default LevaDescription;

@@ -14,8 +14,6 @@ import Proba from "./Proba.jsx"
 function App() {
     const {login, logout, token, username, userID, userFiles, userProjects, loading} = useAuth()
     const adminUser = "67d35793594ff4b68525ca9f";
-    //GITHUB TEST
-
 
     if (loading) {
         return <div>Loading...</div>;
@@ -33,7 +31,6 @@ function App() {
                                 <Route path="/admin/files" element={<Files/>}/>
                             </Route>
                         )}
-
                         <Route
                             path="/projects"
                             element={
@@ -46,11 +43,9 @@ function App() {
                                     (<Navigate to="/main" replace/>)
                             }
                         />
-
                         <Route path="/main" element={<LayoutMain/>}/>
                         <Route path="/proba" element={<Proba/>}/>
                         <Route path="/login" element={<SignIn/>}/>
-
                         <Route path="*" element={<Navigate to="/main" replace/>}/>
                     </Routes>
                 </BrowserRouter>

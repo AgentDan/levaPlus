@@ -5,6 +5,7 @@ import {CiMenuKebab} from "react-icons/ci";
 import Zaglushka from "./Zaglushka.jsx";
 
 const Personal = () => {
+
     const [projects, setProjects] = useState([]);
     const [projectCurrent, setProjectCurrent] = useState();
     const [arr, setArr] = useState([])
@@ -86,6 +87,7 @@ const Personal = () => {
                                  nameFile={projectCurrent}
                                  arr={arr}
                                  setArr={setArr}
+                                 userID={user.userID}
                     />
                     :
                     <Zaglushka

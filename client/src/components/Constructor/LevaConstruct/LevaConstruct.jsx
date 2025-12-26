@@ -8,6 +8,8 @@ import LevaToneMapping from "./LevaToneMapping.jsx";
 import LevaShadows from "./LevaShadows.jsx";
 import LevaEffectComposer from "./LevaEffectComposer.jsx";
 import LevaDescription from "./LevaDescription.jsx";
+import LevaOrbitcontrols from "./LevaOrbitcontrols.jsx";
+import LevaCamera from "./LevaCamera.jsx";
 
 const LevaConstruct = ({ envLeva, setEnvLeva, modelPathLeva }) => {
 
@@ -53,12 +55,14 @@ const LevaConstruct = ({ envLeva, setEnvLeva, modelPathLeva }) => {
                         return <LevaEffectComposer key={item.name} initialIntensity={item} onChange={v => handleChange(item.name, v)} />;
                     case "description":
                         return <LevaDescription key={item.name} initialIntensity={item} onChange={v => handleChange(item.name, v)} />;
-
+                    case "orbitcontrols":
+                        return <LevaOrbitcontrols key={item.name} initialIntensity={item} onChange={v => handleChange(item.name, v)} />;
+                    case "camera":
+                        return <LevaCamera key={item.name} initialIntensity={item} onChange={v => handleChange(item.name, v)} />;
                     default:
                         return null;
                 }
             })}
-
             <LevaButton handleSave={handleSave} />
         </>
     );

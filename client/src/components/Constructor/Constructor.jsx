@@ -8,7 +8,7 @@ import Env from "./Environment/Env.jsx";
 import {Meshes} from "./Meshes.jsx";
 import LevaConstruct from "./LevaConstruct/LevaConstruct.jsx";
 
-const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr}) => {
+const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr, userID}) => {
 
     const user = JSON.parse(localStorage.getItem("userData"));
     const baseUrl = import.meta.env.VITE_BASE_URL;
@@ -20,14 +20,14 @@ const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr}) => 
     const extras = scenes?.[0]?.extras ?? scenes?.[0]?.userData?.extras ?? parser?.json?.scenes?.[0]?.extras;
 
     const [envLeva, setEnvLeva] = useState(() => extras?.env ?? []);
+    const orbit = envLeva.find(item => item.type === "orbitcontrols");
+    const camera = envLeva.find(item => item.type === "camera");
 
     useEffect(() => {
         if (!nodes) return;
         const meshes = Object.values(nodes || {}).filter((node) => node.isMesh);
 
         const arrModel = meshes.map(item => {
-                    const found = envLeva.find(a => a.descriptionName === item.name);
-
                     return {
                         id: v1(),
                         name: item.name.replace(/[0-9_]/g, ""),
@@ -49,27 +49,23 @@ const Constructor = ({openelements, setOpenelements, nameFile, arr, setArr}) => 
     return (
         <div className="h-screen">
             <Canvas
-                camera={{fov: 50, position: [0, 0, 0.1]}}
+                camera={{fov: 50, position: [0, 0, -0.1]}}
                 shadows={{type: THREE.PCFSoftShadowMap}}
             >
                 <Meshes arr={arr} setArr={setArr} materials={materials} nodes={nodes} envLeva={envLeva}/>
                 <Env env={envLeva}/>
-                <LevaConstruct
-                    nodes={nodes}
-                    envLeva={envLeva}
-                    setEnvLeva={setEnvLeva}
-                    modelPathLeva={modelPathLeva}
-                />
+                {userID === "688fa2dc6343680482624b16" &&
+                    <LevaConstruct
+                        nodes={nodes}
+                        envLeva={envLeva}
+                        setEnvLeva={setEnvLeva}
+                        modelPathLeva={modelPathLeva}
+                    />
+                }
                 <OrbitControls
-
                     makeDefault
-
-                    minAzimuthAngle={-Math.PI * 0.35} // влевоa
-                    maxAzimuthAngle={Math.PI * 0.35} // вправо
-                    minPolarAngle={Math.PI * 0.25}   // нижний предел
-                    maxPolarAngle={Math.PI * 0.6}   // верхний предел
+                    {...orbit}
                     enableZoom={false}
-
                 />
             </Canvas>
             <Buttons
